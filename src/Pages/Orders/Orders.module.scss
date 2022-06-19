@@ -1,0 +1,35 @@
+.orders_content {
+  margin-top: 20px;
+  height: 70vh;
+
+  .order {
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+
+    .order_header {
+      border-bottom: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        margin: 0 10px;
+
+        span {
+          font-size: 0.7em;
+          font-style: italic;
+        }
+      }
+    }
+
+    .order_items {
+      display: flex;
+      flex-wrap: wrap;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+main {
+  .searchField {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      overflow: auto;
+    }
+
+    .searchBlock {
+      position: relative;
+
+      .searchico {
+        position: absolute;
+        top: 9px;
+        left: 8px;
+        width: 13px;
+        height: 13px;
+      }
+
+      .search {
+        cursor: text;
+        border: 1px solid grey;
+        border-radius: 10px;
+        font-size: 1em;
+        height: 30px;
+        padding: 0 25px;
+
+        &:focus {
+          outline: 1px solid grey;
+        }
+      }
+
+      .clear {
+        cursor: pointer;
+        position: absolute;
+        top: 9px;
+        right: 8px;
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+
+  h1 {
+    display: inline-block;
+  }
+
+  .content {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

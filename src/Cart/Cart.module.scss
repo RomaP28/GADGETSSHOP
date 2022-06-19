@@ -1,0 +1,199 @@
+  .overlay {
+    z-index: 90;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+
+  .overlayVisible {
+    visibility: visible;
+    opacity: 1;
+
+    .drawer {
+      transform: translateX(0px);
+    }
+  }
+
+  .drawer {
+    z-index: 100;
+    background-color: white;
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+
+    .closeCart {
+      cursor: pointer;
+      position: absolute;
+      left: 10px;
+    }
+
+    .title {
+      color: white;
+      background-color: black;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cartIsEmpty {
+      margin: auto;
+      height: 100%;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      img {
+        margin: 5px auto;
+        width: 130px;
+      }
+
+      .tips {
+        margin: 15px auto;
+        font-style: italic;
+        font-size: 0.8em;
+        color: gray;
+      }
+
+      button {
+        cursor: pointer;
+        width: 140px;
+        padding: 5px 10px;
+        color: white;
+        background-color: black;
+        border: 2px solid black;
+
+        &:hover {
+          color: black;
+          background-color: white;
+        }
+      }
+    }
+
+    .itemList {
+      overflow: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .itemPosition {
+        margin: 10px auto;
+        width: 350px;
+        display: flex;
+        // transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          .deleteItem {
+            cursor: pointer;
+            align-self: center;
+            width: 30px;
+            height: 30px;
+            background-image: url(./img/rectangle-xmark-regular.svg);
+
+            &:hover {
+              background-image: url(./img/rectangle-xmark-solid.svg);
+            }
+          }
+        }
+
+        img {
+          height: 100px;
+          width: 100px;
+        }
+
+        p {
+          width: 150px;
+          text-align: left;
+        }
+
+        .itemInfo {
+          margin-left: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    .bottomBlock {
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 20px;
+
+      .priceLabel {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      button {
+        position: relative;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px 10px;
+        color: white;
+        background-color: black;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+          color: black;
+          background-color: white;
+        }
+
+        &:disabled {
+          cursor: default;
+          background-color: gray;
+          border-color: gray;
+          color: black;
+        }
+
+        &:disabled .iconOrder {
+          background-image: none;
+        }
+
+        &:disabled:hover .iconOrder {
+          background-image: none;
+        }
+
+        &:hover .iconOrder {
+          transition: transform 0.2s ease-in-out;
+          transform: translateX(15px);
+          background-image: url(./img/arrow-right-black.svg);
+        }
+
+        .iconOrder {
+          position: absolute;
+          right: 50px;
+          width: 20px;
+          height: 16px;
+          background-image: url(./img/arrow-right-white.svg);
+          background-repeat: no-repeat;
+        }
+
+        .clipLoader {
+          position: absolute;
+          right: 40px;
+          top: 10px;
+        }
+      }
+    }
+  }

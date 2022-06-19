@@ -1,0 +1,18 @@
+.cardOptions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .icons {
+    width: 30px;
+    height: 28px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,15 @@
+.card {
+  position: relative;
+  margin: 0 20px 20px 0;
+  width: 150px;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
